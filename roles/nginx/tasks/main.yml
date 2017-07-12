@@ -1,0 +1,10 @@
+---
+
+- name: Install NGINX
+  yum: name=nginx
+
+- name: Install NGINX Config
+  copy: src=etc/nginx/nginx.conf dest=/etc/nginx/nginx.conf
+
+- name: Enable NGINX
+  service: name=nginx enabled=yes

@@ -1,0 +1,13 @@
+---
+
+- name: Install Cloudwatch Agent
+  yum: name=awslogs
+
+- name: Install Cloudwatch Log Config
+  copy: src=etc/awslogs/awslogs.conf dest=/etc/awslogs/awslogs.conf
+
+- name: Install Cloudwatch Log Credentials Config
+  copy: src=etc/awslogs/awscli.conf dest=/etc/awslogs/awscli.conf
+
+- name: Enable Cloudwatch Agent
+  service: name=awslogs enabled=yes

@@ -1,0 +1,6 @@
+---
+
+dependencies:
+- nginx
+- tomcat7
+- cloudwatch

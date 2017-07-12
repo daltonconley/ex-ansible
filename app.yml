@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: yes
+  become_method: sudo
+  user: ec2-user
+
+  roles:
+  - app

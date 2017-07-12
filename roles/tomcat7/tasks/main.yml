@@ -1,0 +1,16 @@
+---
+
+- name: Install Tomcat7
+  yum: name=tomcat7
+
+- name: Install Tomcat7 DBCP Fix
+  get_url: url="{{ tomcat_dbcp_fix_url }}" dest=/usr/share/tomcat7/lib/tomcat-dbcp-7.0.30.jar force=yes
+
+- name: Install Tomcat7 Context Config
+  copy: src=usr/share/tomcat7/conf/context.xml dest=/usr/share/tomcat7/conf/context.xml
+
+- name: Install Tomcat7 Server Config
+  copy: src=usr/share/tomcat7/conf/server.xml dest=/usr/share/tomcat7/conf/server.xml
+
+- name: Enable Tomcat7
+  service: name=tomcat7 enabled=yes

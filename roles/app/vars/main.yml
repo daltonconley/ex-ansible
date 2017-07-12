@@ -1,0 +1,4 @@
+---
+
+app_artifact_bucket: address-book-repo
+app_artifact: latest.zip

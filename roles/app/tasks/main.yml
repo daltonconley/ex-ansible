@@ -1,0 +1,7 @@
+---
+
+- name: Download Address Book App
+  s3: mode=get bucket="{{ app_artifact_bucket }}" object="/{{ app_artifact }}" dest=/tmp/addressbook.zip
+
+- name: Install Address Book App
+  unarchive: src=/tmp/addressbook.zip dest=/var/lib/tomcat7/webapps
