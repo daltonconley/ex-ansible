@@ -14,8 +14,6 @@
     "ami_name": "app-{{timestamp}}",
     "vpc_id": "vpc-af4a8ac9",
     "subnet_id": "subnet-32378169",
-    "ssh_keypair_name": "addressbook",
-    "ssh_private_key_file": "/Users/daltonconley/.ssh/addressbook.pem",
     "iam_instance_profile": "app"
   }],
   "provisioners": [{
